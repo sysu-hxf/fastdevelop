@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov 29 18:23:49 2022
+
+@author: DELL
+"""
+dataframe 是一个存储某个强迫下各成员模拟的分海区分季节的SIE值列表
+它的每一行都是一个元组tuple ,每个tuple都由以下list按顺序构成
+amun1 = []
+amun2 = []
+amun3 = []
+amun4 = []
+wed1  = []
+wed2  = []
+wed3  = []
+wed4  = []
+king1 = []
+king2 = []
+king3 = []
+king4 = []
+ea1   = []
+ea2   = []
+ea3   = []
+ea4   = []
+ross1 = []
+ross2 = []
+ross3 = []
+ross4 = []
+
+Of_season_sect_single 做的是区分季节和海区之后的 单强迫检测归因
+里面的printBeta 函数返回的beta从上到下有12个数组，每三行即为一个季度
+一个季度中三行分别代表全部110年,前55年,后55年
+
+
+beta的第四项是残差一致性检验，原假设E(eplsion) = 0需要通过
+才能保障残差项不会对方程造成影响，因此第四项p_value需要在0.95以上
+
